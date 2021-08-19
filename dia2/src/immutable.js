@@ -5,7 +5,10 @@ const john = {
   hobbies: ['Surf', 'Design'],
 }
 
-const jane = john
+const jane = {
+  ...john,
+  hobbies: [...john.hobbies]
+}
 
 jane.name = 'Jane'
 jane.hobbies.push('MuayThai', 'Programming')
