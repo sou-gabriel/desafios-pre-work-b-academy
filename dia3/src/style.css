@@ -7,7 +7,40 @@
   margin-top: 60px;
 }
 
+input {
+  display: block;
+  border: 1px solid #ddd;
+  outline: transparent;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px 0px;
+}
+
 select {
   margin-top: 60px;
   display: block;
+}
+
+.btn {
+  margin-top: 15px;
+}
+
+.car-form {
+  margin-top: 60px;
+}
+
+.car-form .input-block {
+  margin-top: 5px;
+}
+
+.table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 5px;
+  border: 1px solid #ddd;
 }

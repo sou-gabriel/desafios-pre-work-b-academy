@@ -72,3 +72,5 @@ const handleColorSelectChange = event => {
 }
 
 colorSelect.addEventListener('change', handleColorSelectChange)
+
+// Exercício 03
