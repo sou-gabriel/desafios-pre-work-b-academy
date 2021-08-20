@@ -34,3 +34,41 @@ const handleChangeUsername = event => {
 }
 
 inputUsername.addEventListener('input', handleChangeUsername)
+
+// Exercício 02
+const form = document.querySelector('[data-js="form"]')
+
+const colorsContainer = document.createElement('div')
+const colorSelect = document.createElement('select')
+
+form.insertAdjacentElement('afterend', colorsContainer)
+inputUsername.insertAdjacentElement('afterend', colorSelect)
+
+colorSelect.setAttribute('multiple', true)
+
+const colors = ['#FF5733', '#D98880', '#2874A6', '#566573', '#FF3333']
+
+colors.forEach(color => colorSelect.innerHTML +=
+  `<option value="${color}">${color}</option>`)
+
+const generateColorBox = colorOption => {
+  const colorBox = document.createElement('div')
+
+  colorBox.style.display = 'inline-block'
+  colorBox.style.width = '100px'
+  colorBox.style.height = '100px'
+  colorBox.style.background = colorOption.value
+
+  colorsContainer.append(colorBox)
+}
+
+const resetColorsContainer = () => colorsContainer.innerHTML = ''
+
+const handleColorSelectChange = event => {
+  resetColorsContainer()
+
+  Array.from(event.target.selectedOptions)
+    .forEach(generateColorBox)
+}
+
+colorSelect.addEventListener('change', handleColorSelectChange)
