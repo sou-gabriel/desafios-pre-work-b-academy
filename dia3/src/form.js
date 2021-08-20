@@ -5,7 +5,7 @@ const paragraphFormattedUsername = document.createElement('output')
 const getSplittedUsername = username => username.split(' ')
 
 const getFormattedUsername = names => names
-  .map(name => /^de$|^da$|^do$|^dos$/.test(name)
+  .map(name => /^de$|^da$|^das$|^do$|^dos$/.test(name)
     ? name
     : [name[0].toUpperCase(), ...name.slice(1)].join(''))
   .join(' ')
