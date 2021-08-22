@@ -7,6 +7,57 @@
     <title>Dia 4</title>
   </head>
   <body>
+    <div class="container">
+      <form data-js="car-form" class="car-form">
+        <div class="input-block">
+          <label class="label" for="image">Imagem (URL)</label>
+          <input class="input" type="url" id="image" required>
+        </div>
+  
+        <div class="input-block">
+          <label class="label" for="brand">Marca</label>
+          <input class="input" type="text" id="brand" required>
+        </div>
+  
+        <div class="input-block">
+          <label class="label" for="brandModel">Marca/Modelo</label>
+          <input class="input" type="text" id="brandModel" required>
+        </div>
+  
+        <div class="input-block">
+          <label class="label" for="year">Ano</label>
+          <input class="input" type="number" id="year" required>
+        </div>
+  
+        <div class="input-block">
+          <label class="label" for="plate">Placa</label>
+          <input class="input" type="text" id="plate" required>
+        </div>
+  
+        <div class="input-block">
+          <label class="label" for="color">Cor</label>
+          <input class="input" type="color" id="color" required>
+        </div>
+  
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Imagem (URL)</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Placa</th>
+            <th>Cor</th>
+          </tr>
+        </thead>
+  
+        <tbody data-js="table-contents"></tbody>
+      </table>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
