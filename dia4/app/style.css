@@ -41,3 +41,13 @@ body {
   border: 1px solid black;
   text-align: left;
 }
+
+.feedback {
+  margin-bottom: 15px;
+}
+.feedback.error {
+  color: red;
+}
+.feedback.success {
+  color: green;
+}
