@@ -5,7 +5,7 @@ const url = 'http://localhost:3333/cars'
 const form = document.querySelector<HTMLFormElement>('[data-js="cars-form"]')!
 const table = document.querySelector<HTMLTableElement>('[data-js="table"]')!
 
-const getFormElement = (target: HTMLFormElement) => 
+const getFormElement = (target: HTMLFormElement) =>
   (elementName: string): HTMLInputElement => target[elementName]
 
 const elementTypes = {
@@ -19,7 +19,7 @@ type Image = {
   alt: string
 }
 
-function createImage (data: Image) {
+function createImage(data: Image) {
   const td = document.createElement('td')
   const img = document.createElement('img')
   img.src = data.src
@@ -29,13 +29,13 @@ function createImage (data: Image) {
   return td
 }
 
-function createText (value: string) {
+function createText(value: string) {
   const td = document.createElement('td')
   td.textContent = value
   return td
 }
 
-function createColor (value: string) {
+function createColor(value: string) {
   const td = document.createElement('td')
   const div = document.createElement('div')
   div.style.width = '100px'
@@ -87,7 +87,7 @@ form.addEventListener('submit', async (e) => {
   image.focus()
 })
 
-function createTableRow (data: CarData) {
+function createTableRow(data: CarData) {
   const elements = [
     { type: 'image', value: { src: data.image, alt: data.brandModel } },
     { type: 'text', value: data.brandModel },
@@ -130,7 +130,7 @@ function createTableRow (data: CarData) {
   table.appendChild(tr)
 }
 
-async function handleDelete (e: Event) {
+async function handleDelete(e: Event) {
   const button = e.target as HTMLButtonElement
   const plate = button.dataset.plate
 
@@ -152,7 +152,7 @@ async function handleDelete (e: Event) {
   }
 }
 
-function createNoCarRow () {
+function createNoCarRow() {
   const tr = document.createElement('tr')
   const td = document.createElement('td')
   const thsLength = document.querySelectorAll('table th').length
@@ -164,7 +164,7 @@ function createNoCarRow () {
   table.appendChild(tr)
 }
 
-async function main () {
+async function main() {
   const result = await get(url)
 
   if (result.error) {
