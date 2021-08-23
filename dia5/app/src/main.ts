@@ -134,7 +134,7 @@ async function handleDelete (e: Event) {
   const button = e.target as HTMLButtonElement
   const plate = button.dataset.plate
 
-  const result = await del(url, { plate })
+  const result = await del(url, { plate: plate ?? '' })
 
   if (result.error) {
     console.log('erro ao deletar', result.message)
